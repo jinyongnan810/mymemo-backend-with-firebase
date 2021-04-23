@@ -1,6 +1,6 @@
 import express from "express";
 require("express-async-errors");
-import {json} from "body-parser";
+import { json } from "body-parser";
 import cors from "cors";
 
 import cookieSesion from "cookie-session";
@@ -14,8 +14,8 @@ import MemoSingleRouter from "./routers/memo-single";
 import MemoCreateRouter from "./routers/memo-create";
 import MemoUpdateRouter from "./routers/memo-update";
 import MemoDeleteRouter from "./routers/memo-delete";
-import {NotFoundError} from "./errors/not-found-error";
-import {handleError} from "./middlewares/error-handler";
+import { NotFoundError } from "./errors/not-found-error";
+import { handleError } from "./middlewares/error-handler";
 
 const app = express();
 const corsOptions = {
@@ -30,11 +30,11 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.set("trust proxy", true); // trust ingress nginx
 app.use(
-    cookieSesion({
-      signed: false, // no encryption
-      secure: process.env.NODE_ENV === "production", // only https
-    // sameSite: "none",
-    })
+  cookieSesion({
+    signed: false, // no encryption
+    secure: process.env.NODE_ENV === "production", // only https
+    sameSite: "none",
+  })
 );
 app.use(json());
 // auth routes
@@ -55,4 +55,4 @@ app.all("*", async (req, res) => {
 
 app.use(handleError);
 
-export {app};
+export { app };
