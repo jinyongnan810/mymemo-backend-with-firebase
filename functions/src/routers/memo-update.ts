@@ -21,8 +21,8 @@ router.post(
     if (memo.user._id.toString() !== req.currentUser!.id) {
       throw new UnAuthorizedError();
     }
-    memo.title = title;
-    memo.content = content;
+    if (title) memo.title = title;
+    if (content) memo.content = content;
     await memo.save();
     return res.send(memo);
   }
