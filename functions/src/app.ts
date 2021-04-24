@@ -23,7 +23,8 @@ const corsOptions = {
   origin: [
     "http://localhost:3000",
     "https://localhost:3000",
-    "https://kins-page.com",
+    "https://y-kin.com",
+    "https://www.y-kin.com",
   ],
   credentials: true,
   optionsSuccessStatus: 200,
