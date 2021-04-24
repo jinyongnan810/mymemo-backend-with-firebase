@@ -15,7 +15,7 @@ import MemoCreateRouter from "./routers/memo-create";
 import MemoUpdateRouter from "./routers/memo-update";
 import MemoDeleteRouter from "./routers/memo-delete";
 import FileUploadRouter from "./routers/file-upload";
-import MemoTranferRouter from "./routers/transfer-data";
+// import MemoTranferRouter from "./routers/transfer-data";
 import { NotFoundError } from "./errors/not-found-error";
 import { handleError } from "./middlewares/error-handler";
 

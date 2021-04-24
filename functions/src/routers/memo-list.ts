@@ -1,9 +1,9 @@
-import express, {Request, Response} from "express";
-import {Memo} from "../models/memo";
+import express, { Request, Response } from "express";
+import { Memo } from "../models/memo";
 const router = express.Router();
 
 router.get("/api/memo/list", async (req: Request, res: Response) => {
-  const list = await Memo.find({isDeleted: false});
+  const list = await Memo.find({ isDeleted: false }).sort({ updatedAt: -1 });
   return res.send(list);
 });
 
