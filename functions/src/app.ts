@@ -15,6 +15,7 @@ import MemoCreateRouter from "./routers/memo-create";
 import MemoUpdateRouter from "./routers/memo-update";
 import MemoDeleteRouter from "./routers/memo-delete";
 import FileUploadRouter from "./routers/file-upload";
+import MemoTranferRouter from "./routers/transfer-data";
 import { NotFoundError } from "./errors/not-found-error";
 import { handleError } from "./middlewares/error-handler";
 
@@ -51,6 +52,7 @@ app.use(MemoCreateRouter);
 app.use(MemoUpdateRouter);
 app.use(MemoDeleteRouter);
 app.use(FileUploadRouter);
+// app.use(MemoTranferRouter);
 
 app.all("*", async (req, res) => {
   throw new NotFoundError();
