@@ -26,6 +26,7 @@ const corsOptions = {
     "https://localhost:3000",
     "https://y-kin.com",
     "https://www.y-kin.com",
+    "https://jinyongnan810.github.io/",
   ],
   credentials: true,
   optionsSuccessStatus: 200,
