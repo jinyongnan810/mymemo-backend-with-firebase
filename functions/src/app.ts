@@ -8,7 +8,7 @@ import cookieSesion from "cookie-session";
 import CurrentUserRouter from "./routers/current-user";
 import SignInRouter from "./routers/signin";
 import SignOutRouter from "./routers/signout";
-import SignUpRouter from "./routers/signup";
+// import SignUpRouter from "./routers/signup";
 import MemoListRouter from "./routers/memo-list";
 import MemoSingleRouter from "./routers/memo-single";
 import MemoCreateRouter from "./routers/memo-create";
@@ -45,7 +45,7 @@ app.use(json());
 app.use(CurrentUserRouter);
 app.use(SignInRouter);
 app.use(SignOutRouter);
-app.use(SignUpRouter);
+// app.use(SignUpRouter);
 // memo routes
 app.use(MemoListRouter);
 app.use(MemoSingleRouter);
